@@ -95,7 +95,8 @@
                 </div>
                 <div class="project">
                     <h4>Turntables</h4>
-                    <p>Illum vel, minima aliquid exercitationem unde labore aperiam in modi magnam cupiditate debitis. Odio
+                    <p>Illum vel, minima aliquid exercitationem unde labore aperiam in modi magnam cupiditate debitis.
+                        Odio
                         tempora animi nam accusantium est maxime.</p>
                 </div>
                 <div class="project">
@@ -105,7 +106,8 @@
                 </div>
                 <div class="project">
                     <h4>120 days of CSS</h4>
-                    <p>Beatae quasi accusamus quae ab quibusdam, a, nostrum eligendi officiis deserunt fugiat laboriosam hic
+                    <p>Beatae quasi accusamus quae ab quibusdam, a, nostrum eligendi officiis deserunt fugiat laboriosam
+                        hic
                         reiciendis debitis odio dignissimos cum minima.</p>
                 </div>
                 <div class="project">
@@ -122,18 +124,23 @@
         </div>
         <div class="announcements">
             <h4>Announcements</h4>
-            <div class="announce">
-                <h6>Site Maintenance</h6>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi facere rerum velit...</p>
-            </div>
-            <div class="announce">
-                <h6>Codember Month</h6>
-                <p>Porro fugiat itaque non! Voluptates est inventore hic excepturi iste nihil consequuntur...</p>
-            </div>
-            <div class="announce">
-                <h6>Updated Privacy Policy</h6>
-                <p>Quasi repudiandae facere alias cupiditate labore soluta, laborum asperiores dolor numquam incidunt...
-                </p>
+            <div class="sec-announcements">
+                <div class="announce">
+                    <h6>Site Maintenance</h6>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi facere rerum velit...</p>
+                </div>
+                <hr>
+                <div class="announce">
+                    <h6>Codember Month</h6>
+                    <p>Porro fugiat itaque non! Voluptates est inventore hic excepturi iste nihil consequuntur...</p>
+                </div>
+                <hr>
+                <div class="announce">
+                    <h6>Updated Privacy Policy</h6>
+                    <p>Quasi repudiandae facere alias cupiditate labore soluta, laborum asperiores dolor numquam
+                        incidunt...
+                    </p>
+                </div>
             </div>
         </div>
         <div class="trending">
@@ -171,12 +178,17 @@
         </div>
     </div>
     <div class="footer">
-        Copyright © @realrohith 2023
+        <p>Copyright © @realrohith 2023</p>
     </div>
     <script>
+        // Make avatar background color random
+        // document.querySelectorAll('.rand').forEach(rand => {
+        //     rand.style.backgroundColor = "transparent";
+        //     rand.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString();
+        // });
         document.querySelectorAll('.rand').forEach(rand => {
-            rand.style.backgroundColor = "transparent";
-            rand.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString();
+            let arr = ['pink', 'green', 'skyblue', 'black', 'blue', 'yellow', 'purple']
+            rand.style.backgroundColor = arr[Math.floor(Math.random() * arr.length)];
         });
     </script>
 </body>

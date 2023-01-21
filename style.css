@@ -1,19 +1,29 @@
+html,
+body {
+    height: 100%;
+}
+
+html {
+    overflow: hidden;
+}
+
 body {
     display: grid;
-    grid-template: 1fr 5fr / 1fr 5fr;
+    grid-template: 1fr 5fr auto / 1fr 5fr;
     font-family: Roboto;
     background-color: lightgray;
     margin: 0px;
+    ;
 }
 
-/* Section 1 of 3 */
+/* Section 1 of 4 */
 .sidebar {
-    grid-area: 1/1/-1/2;
+    grid-area: 1/1/-2/2;
     display: grid;
     grid-template-rows: 10% auto;
     background: skyblue;
-    height: 100%;
     width: 20vw;
+    padding-left: 20px;
 }
 
 .icon {
@@ -45,7 +55,6 @@ body {
     align-items: center;
     gap: 10px;
     padding: 10px;
-    /* max-height: 20vh; */
 }
 
 .navigation {
@@ -79,7 +88,7 @@ a {
     background-size: contain;
 }
 
-/* Section 2 of 3 */
+/* Section 2 of 4 */
 .header {
     grid-area: 1/2/2/-1;
     display: grid;
@@ -136,7 +145,7 @@ a {
 .mini-avatar {
     height: 52px;
     width: 52px;
-    background-color: red;
+    background-color: orangered;
     border-radius: 50%;
 }
 
@@ -159,15 +168,16 @@ button {
     border: none;
 }
 
-/* Section 3 of 3 */
+/* Section 3 of 4 */
 .main {
-    grid-area: 2/2/-1/-1;
-    height: 100px;
+    grid-area: 2/2/-2/-1;
+    height: 100%;
     display: grid;
     grid-template: repeat(2, 1fr) / 2fr 1fr;
     background-color: lightgray;
     gap: 10px;
     padding-bottom: 20px;
+    overflow: scroll
 }
 
 .announce>p {
@@ -184,22 +194,21 @@ button {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 0px 20px;
-    /* grid-template-rows: 100px; */
-    /* grid-auto-rows: 200px; */
 }
 
 .projects>h4 {
     margin: 30px 0px 10px 20px;
 }
 
-.project>p {
+.project>p,
+.footer>p {
     color: darkgray;
     font-weight: 500;
 }
 
 .project {
     border-radius: 10px;
-    border-left: 5px solid orange;
+    border-left: 5px solid orangered;
     background-color: white;
     padding: 25px;
 }
@@ -214,6 +223,12 @@ button {
     flex-direction: column;
     margin-right: 20px;
     background-color: lightgray;
+}
+
+.sec-announcements {
+    background-color: white;
+    border-radius: 10px;
+    border: 5px solid black;
 }
 
 .announcements>h4 {
@@ -241,16 +256,30 @@ button {
     gap: 5px;
 }
 
-.sec-trending {
-    /* padding-top: 20px; */
-}
-
 .sec-trending>.user:first-child {
     padding-top: 20px;
 }
-.trending>h4{
+
+.trending>h4 {
     margin: 20px 0px 10px 0px;
 }
-.sec-trending>.user:last-child{
 
+.sec-trending {
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+/* Section 3 of 4 */
+.footer {
+    height: 3rem;
+    grid-area: -2/-1/-1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+hr {
+    border: 0;
+    border-top: 2px dotted orangered;
 }
